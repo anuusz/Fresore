@@ -1,6 +1,4 @@
-```markdown
-     ![Logo Fresore](ff/public/Fresore.png)  
-```  
+# <img src="ff/public/Fresore.png" alt="Logo Fresore" width="200"/> 
 
 **Solusi Digital untuk Manajemen Vendor Buah & Sayuran**  
 
