@@ -1,4 +1,6 @@
-# <span style="font-family: 'Satisfy', cursive; font-size: 1.5em;">fresore</span>  
+```markdown
+     ![Logo Fresore](ff/public/logo.png)  
+```  
 
 **Solusi Digital untuk Manajemen Vendor Buah & Sayuran**  
 
