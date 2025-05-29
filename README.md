@@ -1,5 +1,5 @@
 ```markdown
-     ![Logo Fresore](ff/public/logo.png)  
+     ![Logo Fresore](ff/public/Fresoré.png)  
 ```  
 
 **Solusi Digital untuk Manajemen Vendor Buah & Sayuran**  
