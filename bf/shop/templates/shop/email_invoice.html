@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Invoice</title>
+</head>
+<body>
+    <h1>Invoice #{{ order.invoice_number }}</h1>
+    <p>Hello {{ order.user.get_full_name|default:order.user.username }},</p>
+    <p>Thank you for your order. Your invoice is attached to this email.</p>
+    
+    <h2>Order Summary</h2>
+    <ul>
+        {% for item in order.items.all %}
+        <li>{{ item.quantity }} x {{ item.product.name }} - ${{ item.get_cost }}</li>
+        {% endfor %}
+    </ul>
+    
+    <p><strong>Total: ${{ order.total }}</strong></p>
+    
+    <p>If you have any questions, please contact our support team.</p>
+    
+    <p>Best regards,<br>Your Ecommerce Team</p>
+</body>
+</html>
