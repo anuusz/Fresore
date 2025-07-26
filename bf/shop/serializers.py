@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import Category, Product, Order, OrderItem
 
+from .models import Promo, Wishlist
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
@@ -18,20 +20,21 @@ class OrderItemSerializer(serializers.ModelSerializer):
         model = OrderItem
         fields = ['id', 'product', 'price', 'quantity']
 
+
 class OrderSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True, read_only=True)
     user = serializers.StringRelatedField()
-    
+
     class Meta:
         model = Order
         fields = ['id', 'user', 'created', 'updated', 'status', 
                  'total', 'invoice_number', 'shipping_address', 
                  'billing_address', 'items']
-    
+
     def create(self, validated_data):
         items_data = self.context.get('items_data', [])
         order = Order.objects.create(**validated_data)
-        
+
         total = 0
         for item_data in items_data:
             product = Product.objects.get(id=item_data['product_id'])
@@ -42,7 +45,19 @@ class OrderSerializer(serializers.ModelSerializer):
                 quantity=item_data['quantity']
             )
             total += product.price * item_data['quantity']
-        
+
         order.total = total
         order.save()
         return order
+
+# Promo serializer
+class PromoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Promo
+        fields = '__all__'
+
+# Wishlist serializer
+class WishlistSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Wishlist
+        fields = '__all__'

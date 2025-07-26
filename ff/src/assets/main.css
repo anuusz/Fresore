@@ -1,9 +1,9 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%; /* Ganti dari max-width: 1280px */
+  margin: 0; /* Ganti dari margin: 0 auto */
+  padding: 0; /* Ganti dari padding: 2rem */
   font-weight: normal;
 }
 
@@ -28,8 +28,27 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    /* HAPUS display: grid dan grid-template-columns */
+    width: 100%; /* Full width di desktop */
+    padding: 0; /* No padding */
+  }
+
+  body {
+    position: relative;
+  }
+
+  #app {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Override untuk modal */
+  .modal-overlay {
+    position: fixed !important;
+    z-index: 99999 !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
   }
 }

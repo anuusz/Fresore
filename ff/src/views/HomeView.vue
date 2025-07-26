@@ -1,17 +1,37 @@
 <script setup lang="ts">
 // import { RouterLink, RouterView } from 'vue-router'
-import Listitem from '../components/Listitem.vue'
+import ListItem from '../components/ListItem.vue'
 import Navbar from '../components/Navbar.vue'
-// import Footer from '@/components/Footer.vue'
-// import Banner from './components/Banner.vue';
-// import Banner from './components/Home.vue';
+import LoginModal from '../components/LoginModal.vue'
 </script>
 
 <template>
   <Topbar />
   <Navbar />
-  <Listitem />
+  <ListItem />
   <!-- <Footer /> -->
+
+  <!-- Test Button untuk debug -->
+  <!-- <button
+    @click="testModal"
+    style="
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: red;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    "
+  >
+    Test Modal
+  </button> -->
+
+  <!-- Modal Login - Tambahan ini -->
+  <LoginModal />
 </template>
 
 <style scoped>

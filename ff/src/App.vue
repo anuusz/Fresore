@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 // import { RouterLink, RouterView } from 'vue-router'
 // import Listitem from './components/Listitem.vue';
 // import Navbar from './components/Navbar.vue';
@@ -8,6 +9,12 @@
 // import Footer from './components/Footer.vue'
 // import Banner from './components/Banner.vue';
 // import Banner from './components/Home.vue';
+
+// Auto-clear localStorage untuk testing - hapus di production
+onMounted(() => {
+  localStorage.clear() // Uncomment untuk auto-logout setiap refresh
+  console.log('localStorage cleared - user logged out for testing')
+})
 </script>
 
 <template>

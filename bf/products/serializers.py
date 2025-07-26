@@ -11,8 +11,17 @@ class ProductSerializer(serializers.ModelSerializer):
             'name',
             'description',
             'price',
+            'original_price',
             'category',
+            'stock',
+            'rating',
+            'review_count',
+            'brand',
+            'discount',
+            'is_new',
+            'sold',
             'image_url',
+            'is_active',
         ]
     
     def get_image_url(self, obj):
