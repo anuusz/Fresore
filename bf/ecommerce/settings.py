@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'products',
     'django.contrib.postgres',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -88,8 +89,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fresore_db',  # Ganti dengan nama database Anda
+        'USER': 'postgres',    # Ganti dengan user PostgreSQL Anda
+        'PASSWORD': '',# Ganti dengan password PostgreSQL Anda
+        'HOST': 'localhost',   # Atur sesuai host PostgreSQL Anda
+        'PORT': '5432',        # Port default PostgreSQL
     }
 }
 

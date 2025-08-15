@@ -241,15 +241,15 @@
             <div class="cart-benefits">
               <div class="benefit-item fade-in-benefit" style="animation-delay: 0.1s">
                 <span class="benefit-icon">🚚</span>
-                <span>Gratis ongkir min. Rp 100.000</span>
+                <span>Gratis Ongkir</span>
               </div>
               <div class="benefit-item fade-in-benefit" style="animation-delay: 0.2s">
                 <span class="benefit-icon">✅</span>
-                <span>Garansi produk segar</span>
+                <span>Garansi Produk Segar</span>
               </div>
               <div class="benefit-item fade-in-benefit" style="animation-delay: 0.3s">
                 <span class="benefit-icon">⚡</span>
-                <span>Pengiriman same day</span>
+                <span>Pengiriman Same Day</span>
               </div>
             </div>
           </div>
@@ -788,13 +788,13 @@ export default {
 .cart-hero {
   background: linear-gradient(135deg, #2ed573 0%, #26af5f 100%);
   border-radius: 25px;
-  padding: 40px;
+  /* padding: 10px; */
   margin: 20px 0;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
-  animation: slideInDown 0.8s ease-out;
+  animation: slideInDown 0.5s ease-out;
 }
 
 .cart-hero::before {
@@ -858,7 +858,7 @@ export default {
 }
 
 .cart-items-section {
-  background: rgba(255, 255, 255, 0.9);
+  background: #fdf6e3;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -1165,7 +1165,7 @@ export default {
 
 /* Cart Summary Enhanced */
 .cart-summary.sticky-summary {
-  background: rgba(255, 255, 255, 0.95);
+  background: #fdf6e3;
   border-radius: 25px;
   padding: 30px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
@@ -1220,12 +1220,6 @@ export default {
   transition: all 0.3s ease;
 }
 
-.summary-row:hover {
-  background: rgba(46, 213, 115, 0.05);
-  border-radius: 8px;
-  padding: 12px 10px;
-}
-
 .amount-animation {
   animation: countUp 0.5s ease-out;
 }
@@ -1275,7 +1269,7 @@ export default {
 }
 
 .promo-input.expanded {
-  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  background: linear-gradient(45deg, #7ec055, #fdf6e3);
   border-radius: 15px;
   padding: 15px;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -1284,7 +1278,7 @@ export default {
 .promo-input-field {
   flex: 1;
   border: none;
-  background: white;
+  background: #fdf6e3;
   outline: none;
   font-size: 1rem;
   padding: 10px 15px;
@@ -1327,8 +1321,8 @@ export default {
 }
 
 .apply-promo.gradient-btn {
-  background: linear-gradient(45deg, #2ed573, #26af5f);
-  color: white;
+  background: #7ec055;
+  color: #f4f4de;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -1352,7 +1346,7 @@ export default {
   width: 100%;
   background: linear-gradient(45deg, #2ed573, #26af5f, #2ed573);
   background-size: 200% 200%;
-  color: white;
+  color: #f4f4de;
   border: none;
   padding: 18px 25px;
   border-radius: 20px;
@@ -1424,7 +1418,7 @@ export default {
 /* Recommended Products Enhanced */
 .recommended-section {
   margin: 50px 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fdf6e3;
   border-radius: 25px;
   padding: 35px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
@@ -1459,7 +1453,7 @@ export default {
 }
 
 .recommended-item.card-hover {
-  background: white;
+  background: #fdf6e3;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -1518,13 +1512,13 @@ export default {
   transition: opacity 0.3s ease;
 }
 
-.recommended-image:hover .image-hover-overlay {
+/* .recommended-image:hover .image-hover-overlay {
   opacity: 1;
-}
+} */
 
-.recommended-image:hover img {
+/* .recommended-image:hover img {
   transform: scale(1.1);
-}
+} */
 
 .quick-view {
   color: white;

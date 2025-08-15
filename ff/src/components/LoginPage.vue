@@ -238,7 +238,8 @@ export default {
 .login-page {
   min-height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background-image: src('@/assets/Fresorepage.png');
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,20 +294,20 @@ export default {
 }
 
 .login-card {
-  background: rgba(255, 255, 255, 0.95);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow:
-    0 32px 64px rgba(0, 0, 0, 0.2),
-    0 16px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  animation: cardSlideIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  width: 100%;
-  box-sizing: border-box;
-}
+            background: rgba(255, 255, 255, 0.075);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow:
+                0 32px 64px rgba(0, 0, 0, 0.1),
+                0 16px 32px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            /* border: 1px solid rgba(255, 255, 255, 0.3); */
+            animation: cardSlideIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            width: 100%;
+            box-sizing: border-box;
+        }
 
 @keyframes cardSlideIn {
   from {
@@ -325,13 +326,14 @@ export default {
 }
 
 .brand-name {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #2ed573, #26af5f);
+  background: linear-gradient(120deg, #cde5b2, #8bc34a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.3rem;
+  margin: 0;
+  font-family: 'Satisfy', cursive;
 }
 
 .welcome-text {

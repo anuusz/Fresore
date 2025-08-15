@@ -148,7 +148,7 @@ export default {
 
 <style scoped>
 .product-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: #fdf6e3;
   backdrop-filter: blur(20px);
   border-radius: 24px;
   overflow: hidden;
@@ -324,11 +324,16 @@ export default {
 /* Product Details */
 .product-details {
   padding: 15px;
+  position: relative;
+  min-height: 180px; /* Sesuaikan tinggi minimum */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Tambahkan ini */
 }
 
 .product-brand {
   font-size: 0.7rem;
-  color: #74b9ff;
+  color: #8bc34a;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
@@ -352,6 +357,7 @@ export default {
 /* Price Section */
 .price-section {
   margin-bottom: 15px;
+  min-height: 50px; /* Ruang tetap untuk harga */
 }
 
 .current-price {
@@ -368,17 +374,23 @@ export default {
   font-size: 0.9rem;
   color: #b2bec3;
   text-decoration: line-through;
+  min-height: 1em; /* Pertahankan ruang */
+  visibility: visible; /* Pastikan tetap terlihat */
+}
+
+/* Class tambahan untuk harga asli yang kosong */
+.original-price.empty {
+  visibility: hidden; /* Sembunyikan tapi pertahankan ruang */
 }
 
 /* Add to Cart Button */
 .add-to-cart-btn {
   width: 100%;
-  position: relative;
   background: #2ed573;
   border: none;
   border-radius: 12px;
   padding: 10px 16px;
-  color: white;
+  color: #fdf6e3;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
@@ -388,6 +400,11 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 6px;
+
+  /* Tambahkan ini untuk memastikan tombol tetap di bawah */
+  margin-top: auto; /* Kunci di bagian bawah */
+  position: sticky;
+  bottom: 0;
 }
 
 .btn-overlay {
@@ -405,6 +422,7 @@ export default {
 .btn-text {
   position: relative;
   z-index: 1;
+  color: #fdf6e3;
 }
 
 .add-to-cart-btn:hover {

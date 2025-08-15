@@ -19,7 +19,7 @@
     </div>
 
     <!-- Profile Stats -->
-    <div class="profile-stats">
+    <!-- <div class="profile-stats">
       <div class="stat-card">
         <div class="stat-number">{{ userData.totalOrders }}</div>
         <div class="stat-label">Total Pesanan</div>
@@ -32,7 +32,7 @@
         <div class="stat-number">{{ userData.points }}</div>
         <div class="stat-label">Poin Reward</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Profile Menu -->
     <div class="profile-menu">
@@ -59,26 +59,26 @@
         <h3>Pesanan</h3>
         <div class="menu-item" @click="handleMenuClick('orders')">
           <span class="menu-icon">📦</span>
-          <span class="menu-text">Riwayat Pesanan</span>
+          <span class="menu-text">Invoice</span>
           <span class="menu-arrow">›</span>
         </div>
-        <div class="menu-item" @click="handleMenuClick('wishlist')">
+        <!-- <div class="menu-item" @click="handleMenuClick('wishlist')">
           <span class="menu-icon">❤️</span>
           <span class="menu-text">Wishlist</span>
           <span class="menu-arrow">›</span>
-        </div>
-        <div class="menu-item" @click="handleMenuClick('reviews')">
+        </div> -->
+        <!-- <div class="menu-item" @click="handleMenuClick('reviews')">
           <span class="menu-icon">⭐</span>
           <span class="menu-text">Ulasan Saya</span>
           <span class="menu-arrow">›</span>
-        </div>
+        </div> -->
       </div>
 
       <div class="menu-section">
         <h3>Lainnya</h3>
         <div class="menu-item" @click="handleMenuClick('rewards')">
-          <span class="menu-icon">🎁</span>
-          <span class="menu-text">Poin & Reward</span>
+          <span class="menu-icon">⭐</span>
+          <span class="menu-text">Tentang Kami</span>
           <span class="menu-arrow">›</span>
         </div>
         <div class="menu-item" @click="handleMenuClick('help')">
@@ -133,17 +133,18 @@ export default {
 
 <style scoped>
 .profile-content {
-  background: white;
-  border-radius: 20px;
+  background: #fdf6e3;
+  border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
 }
 
 /* Profile Header */
 .profile-header {
   background: linear-gradient(135deg, #52c41a, #73d13d);
   padding: 40px;
-  color: white;
+  color: #fdf6e3;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -170,7 +171,7 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: white;
+  background: #fdf6e3;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -223,10 +224,6 @@ export default {
   transition: background 0.3s;
 }
 
-.stat-card:hover {
-  background: #f9f9f9;
-}
-
 .stat-card:last-child {
   border-right: none;
 }
@@ -270,10 +267,12 @@ export default {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 10px;
+
 }
 
 .menu-item:hover {
-  background: #f9f9f9;
+  background: #8bc34a;
+  color: #fdf6e3;
   margin: 0 -15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -288,11 +287,6 @@ export default {
   font-size: 1.2rem;
   margin-right: 15px;
   width: 24px;
-}
-
-.menu-text {
-  flex: 1;
-  color: #333;
 }
 
 .menu-arrow {

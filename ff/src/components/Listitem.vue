@@ -447,7 +447,7 @@ export default {
         groceries: {
           hero: {
             title: 'Belanja Kebutuhan, Hidup Praktis! 🛒',
-            description: 'Lengkapi kebutuhan dapur dan rumah tangga dengan produk berkualitas',
+            description: 'Lengkapi kebutuhan dapur dengan produk berkualitas',
             stats: [
               { number: '2000+', label: 'Produk Lengkap' },
               { number: '24/7', label: 'Delivery' },
@@ -471,7 +471,7 @@ export default {
         meat: {
           hero: {
             title: 'Daging Segar, Protein Terbaik! 🥩',
-            description: 'Pilihan daging segar berkualitas tinggi untuk keluarga tercinta',
+            description: 'Pilihan daging segar berkualitas tinggi untuk hidangan terbaik!',
             stats: [
               { number: '300+', label: 'Daging Fresh' },
               { number: '24/7', label: 'Delivery' },
